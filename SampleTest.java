@@ -8,21 +8,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-class Sample {
+class SampleTest {
 
 	@Test
-	void test() throws InterruptedException {
+	void testFail() throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\SU20047815\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://in.linkedin.com/");
-		Thread.sleep(10000);
-		String title = driver.getTitle();
-		System.out.println(title);
+		Thread.sleep(50000);
+		System.out.println("Finding Element");
+		driver.findElement(By.xpath("//*[@name='login-email']")).sendKeys("test");
+		System.out.println("Element not found");
 		driver.close();
-
 	}
-
 	
+
 }
