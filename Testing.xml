@@ -12,5 +12,9 @@
 <package name="Sample.code.com">
 </package>
 </test>
+ 
+ <testsuites tests="2" failures="2" disabled="0" errors="0" time="10.898" name="AllTests">
+    <!-- Add test suite and other stuff here-->
+</testsuites>
 
 </suite>
